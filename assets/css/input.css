@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/****************************************************************/
+@font-face {
+    font-family: x ;
+    src: url("../../fonts/7/digital-7.ttf") format("truetype");
+}
+
+
+.cal-skin{
+    @apply  bg-gray-700 w-[400px] h-[380px] m-auto mt-20 rounded-md p-5
+    
+}
+
+/*** نمایشگر ***/
+
+#display{
+    @apply bg-gray-300 w-[300px] h-[50px] m-auto flex justify-end items-end rounded-sm text-5xl overflow-x-hidden
+    }
+
+
+/*** دکمه ها ***/
+
+.btns{
+    @apply grid grid-cols-4 gap-4 px-5 rounded-sm mt-[50px] 
+}
+.clear{
+    @apply bg-red-500
+}
+.equal{
+    @apply bg-yellow-300 flex justify-center items-center  text-2xl font-bold
+}
+.operator{
+    @apply bg-green-400 flex justify-center items-center text-2xl font-bold
+}
+.clear{
+    @apply text-xl 
+}
+button{
+    @apply bg-gray-300  rounded-md p-2 text-xl
+}
+button{
+    @apply /*hover:bg-[rgb(111,110,110)]*/ active:bg-blue-500
+}
+
+.darkMode{
+    @apply relative
+}
+.switch{
+    @apply bg-gray-600  w-20 h-7  flex justify-center items-center rounded-lg  
+}
+.switch.active{
+    @apply top-[2px] left-[5px] 
+}
+.flicker{
+    @apply bg-red-500 w-6 h-6 rounded-full absolute top-[2px] left-[5px] cursor-pointer
+}
+
+.flicker.active{
+    @apply top-[2px] left-[50px] transition-all duration-300
+}
+
+.dark{
+    @apply bg-black transition-all duration-300
+}
+.dark.active{
+    @apply bg-white transition-all duration-300
+}
